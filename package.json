@@ -1,27 +1,30 @@
 {
-  "name": "incident-manager",
-  "version": "1.0.0",
-  "description": "Incident Manager simplifies incident reporting with a user-friendly setup and timely notifications. It's your practical tool to handle unexpected situations effortlessly, keeping you informed and in control.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.2",
-    "bootstrap": "^5.3.2",
-    "cookie-parser": "^1.4.6",
-    "debug": "^4.3.4",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "http-errors": "^2.0.0",
-    "jquery": "^3.7.1",
-    "mongoose": "^8.0.1",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1",
-    "node": ">= 14.20.1"
-  }
+    "name": "incident-manager",
+    "version": "1.0.0",
+    "description": "Incident Manager simplifies incident reporting with a user-friendly setup and timely notifications. It's your practical tool to handle unexpected situations effortlessly, keeping you informed and in control.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.4.2",
+        "bootstrap": "^5.3.2",
+        "connect": "^3.7.0",
+        "cookie-parser": "^1.4.6",
+        "debug": "^4.3.4",
+        "dotenv": "^16.3.1",
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "http-errors": "^2.0.0",
+        "jquery": "^3.7.1",
+        "mongoose": "^8.0.1",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "node": ">= 14.20.1",
+        "nodemon": "^3.0.1"
+    }
 }
