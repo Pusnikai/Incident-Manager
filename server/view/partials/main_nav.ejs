@@ -16,6 +16,22 @@
                                         <i class="fa-solif fa-lg fa-house-crack"></i> Home
                                 </a>
                 </li>
+
+                <li class="nav-item">
+                    <% if (title == "reports") { %>
+                        <a class="nav-link active" aria-current="page" href="reports">
+                            <i class="fa-solid">   
+                            </i>
+                            Reports
+                        </a>
+                    <% } else { %>
+                        <a class="nav-link" aria-current="page" href="/reports">
+                            <i class="fa-solid">
+                            </i>
+                            Reports
+                        </a>
+                        <% } %>
+                </li>
         </div>
     </div>
 
