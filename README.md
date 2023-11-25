@@ -3,6 +3,7 @@ Incident Manager simplifies incident reporting with a user-friendly setup and ti
 
 You can Create, Update, and Delete incidents as you see fit.
 
+(Week 1)
 Things to do:
 Splash page with team logo
 logo will direct user to incident page
@@ -14,3 +15,14 @@ Name, Date (day and time), type of incident, description, Administrator, damages
 -Need to make an Video for change
 -models done
 -Debugging issue with integrations from different collaborator successful :)
+-Adding new incident to database
+-Full CRUD working and compatible
+-Need to make video 
+
+(Week 2)
+Next Steps
+-GUI, UI changes
+-Make it look Nice
+-Loggin and user authentications
+-About sections, Home Page views refining and making it better.
+    

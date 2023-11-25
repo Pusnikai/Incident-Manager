@@ -17,7 +17,7 @@ body {
 
 #header {
     text-align: center;
-    background-color: #1100F5;
+    background-color: #000000;
     color: #fff;
     /* Change to white */
     padding: 20px 0;
@@ -65,7 +65,6 @@ body {
 .colRight {
     display: block;
     text-align: left;
-    background: linear-gradient(#ff0066, #6600ff);
     color: whitesmoke;
     font-size: 20px;
     margin-bottom: 100px;
