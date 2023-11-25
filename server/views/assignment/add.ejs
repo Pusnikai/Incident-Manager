@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 cl-md-6 text-center">
-        <h1 style="color: blue;"><%= title %></h1>
+        <h1><%= title %></h1>
         <form class="form" method="POST">
             <!--this is the form for the add page -->
             <div class="form-group">
@@ -24,8 +24,8 @@
                 placeholder="Enter the title"
                 name="Name"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
 
             <div class="form-group">
@@ -35,8 +35,8 @@
                 placeholder="Enter the date and time"
                 name="DateTime"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
 
             <div class="form-group">
@@ -46,8 +46,8 @@
                 placeholder="Enter the type"
                 name="Type"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
 
             <div class="form-group">
@@ -57,8 +57,8 @@
                 placeholder="Enter the Description"
                 name="Description"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
 
             <div class="form-group">
@@ -68,8 +68,8 @@
                 placeholder="Enter the admin"
                 name="Admin"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
 
             <div class="form-group">
@@ -79,8 +79,8 @@
                 placeholder="Enter the damage"
                 name="Damage"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
 
 
@@ -91,25 +91,30 @@
                 placeholder="Enter the status"
                 name="Status"
                 required
-                style="background-color: rgba(0, 210, 255, 1);"
-                style="color: black;">
+                style="background-color: white;"
+                style="color: white;">
             </div>
-
 
             <br>
-            <!--the below 2 buttons are for submit and delete-->
-            <button class="btn btn-primary" type="submit"
-            style="background-color: rgba(47, 240, 41, 1); color: black;">
-                <i class="fa-solid fa-thumbs-up"></i> Submit
-            </button>
-
-            <a href="/assignments" class="btn btn-warning"
-                style="background-color: rgba(255, 0, 0, 1); color: black;">
-                <i class="fa-solid fa-ban"></i> Cancel
-            </a>
-            </form>
+            <div class="row">
+                <div class="col">
+                    <!-- "Submit" button -->
+                    <button class="btn btn-primary btn-block mb-2" type="submit"
+                            style="background-color: rgba(231, 255, 0, 0.8); color: black;">
+                        <i class="fa-solid fa-vault"></i> Submit
+                    </button>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col">
+                    <!-- "Cancel" button -->
+                    <a href="/assignments" class="btn btn-warning btn-block"
+                    style="background-color: rgba(255, 0, 0, 1); color: black;">
+                        <i class="fa-solid fa-exclamation"></i> Cancel
+                    </a>
+                </div>
+            </div>
+
     </div>
 
 </div>

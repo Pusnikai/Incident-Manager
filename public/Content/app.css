@@ -24,8 +24,8 @@ body {
 }
 
 #homeSection {
-    background: linear-gradient(135deg, #ffb302fc, #ff0000);
-    color: #fff;
+    /*background: linear-gradient(135deg, #ffb302fc, #ff0000);*/
+    color: #000000;
     padding: 20px;
     text-align: center;
     display: flex;
