@@ -1,0 +1,79 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %> 
+<head>
+    <!-- making a margin to see everything -->
+    <style>
+        main.container {
+            margin-bottom: 150px; /* Adjust the value to set the desired space between content and footer */
+        }
+    </style>
+</head>
+
+<main class="container" style="margin-bottom: 100px;">
+    <!-- main  Content-->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <div class="row">
+            <div class="offset-md-1 col-md-14">
+     
+
+            <table class="table table-bordered table-striped table-hover table-dark">
+                <tr class="d-flex">
+                <!--This is for the table-->
+                    <th class="text-center col-1">Name</th>
+                    <th class="text-center col-1">DateTime</th>
+                    <th class="text-center col-1">Type</th>
+                    <th class="text-center col-2">Description</th>
+                    <th class="text-center col-2">Admin</th>
+                    <th class="text-center col-2">Damage</th>
+                    <th class="text-center col-1">Status</th>
+                    <th class="text-center col-1">To Edit Incident</th>
+                    <th class="text-center col-1">To Delete Incident</th>
+                </tr>
+                <!--This is for the table contents-->
+                <% for(let count=0;count<report.length;count++) { %>    
+    
+                    <tr class="d-flex">
+                    <td class="text-center col-1"><%= report[count].Name %></td>
+                    <td class="text-center col-1"><%= report[count].DateTime %></td>
+                    <td class="text-center col-1"><%= report[count].Type %></td>
+                    <td class="text-center col-2"><%= report[count].Description %></td>
+                    <td class="text-center col-2"><%= report[count].Admin %></td>
+                    <td class="text-center col-2"><%= report[count].Damage %></td>
+                    <td class="text-center col-1"><%= report[count].Status %></td>
+                    <td class="text-center col-1">
+                        <a href="/assignments/edit/<%= report[count]._id %>"
+                        class="btn btn-primary"
+                        style="background-color: rgba(47, 240, 41, 1); color: black;">
+                        <i class="fa-solid fa-rotate"></i> Update
+                        </a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href ="/assignments/delete/<%= report[count]._id %>"
+                                class="btn btn-danger">
+                                <i class="fa-solid fa-xmark"></i> DELETE </a>
+                        </td>
+
+                <% } %>
+        </table> 
+                <a href="/assignments/add" class ="btn btn-light" 
+                style="background-color: rgba(0, 255, 247, 1); color: black;"
+                role = "button">
+                <i class="fa-regular fa-square-plus"></i> Add An Incident
+                </a>         
+        
+        
+        
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</main>
+
+
+<%- include ../partials/bottom_nav.ejs %> 
+<!--footer-->
+<%- include ../partials/footer.ejs %> 

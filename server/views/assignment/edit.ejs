@@ -1,0 +1,127 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %> 
+
+<head>
+    <!-- making a margin to see everything -->
+    <style>
+        main.container {
+            margin-bottom: 300px; /* Adjust the value to set the desired space between content and footer */
+        }
+    </style>
+</head>
+<main class="container" style="margin-bottom: 100px;">
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 cl-md-6 text-center">
+        <h1 style="color: red;"><%= title %></h1>
+        <form class="form" method="POST">
+            <!--this is the form for the eidt page -->
+            <div class="form-group">
+                <label for="NameTextField">Name</label>
+                <input type="text" class="form-control"
+                id="NameTextField"
+                placeholder="Enter the title"
+                name="Name"
+                value="<%= assignments.Name %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="DateTimeTextField">DateTime</label>
+                <input type="text" class="form-control"
+                id="DateTimeTextField"
+                placeholder="Enter the date and time"
+                name="DateTime"
+                value="<%= assignments.DateTime %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="TypeTextField">Type</label>
+                <input type="text" class="form-control"
+                id="TypeTextField"
+                placeholder="Enter the type"
+                name="Type"
+                value="<%= assignments.Type %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="DescriptionTextField">Description</label>
+                <input type="text" class="form-control"
+                id="DescriptionTextField"
+                placeholder="Enter the assignment description"
+                name="Description"
+                value="<%= assignments.Description %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+           <br>
+            <div class="form-group">
+                <label for="AdminTextField">Admin</label>
+                <input type="text" class="form-control"
+                id="AdminTextField"
+                placeholder="Enter the admin"
+                name="Admin"
+                value="<%= assignments.Admin %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+           <br>
+            <div class="form-group">
+                <label for="DamageTextField">Damage</label>
+                <input type="text" class="form-control"
+                id="DamageTextField"
+                placeholder="Enter the Damage"
+                name="Admin"
+                value="<%= assignments.Damage %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+          <br>
+            <div class="form-group">
+                <label for="StatusTextField">Status</label>
+                <input type="text" class="form-control"
+                id="StatusTextField"
+                placeholder="Enter the Status"
+                name="Admin"
+                value="<%= assignments.Status %>"
+                required
+                style="background-color: yellow;"
+                style="color: black;">
+            </div>
+            <br>
+            <!--the below 2 buttons are for submit and delete-->            
+            <button class="btn btn-primary" type="submit"
+            style="background-color: rgba(47, 240, 41, 1); color: black;">
+                <i class="fa-solid fa-thumbs-up"></i> Submit
+            </button>
+
+            <a href="/assignments" class="btn btn-warning"
+                style="background-color: rgba(255, 0, 0, 1); color: black;">
+                <i class="fa-solid fa-ban"></i> Cancel
+            </a>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<%- include ../partials/bottom_nav.ejs %> 
+<!--footer-->
+<%- include ../partials/footer.ejs %> 
