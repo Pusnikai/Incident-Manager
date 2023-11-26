@@ -4,6 +4,16 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
+let app = express();
+//create a user model inst
+let userModel = require('../models/user');
+let user = userModel.User;
+
 
 let mongoose = require('mongoose');
 let DB = require('./db');
@@ -13,11 +23,29 @@ let mongoDB = mongoose.connection;
 mongoDB.on('error',console.error.bind(console,'Connection Error'));
 mongoDB.once('open',()=>{console.log("The Mongo DB is connected")});
 
+
+//encrypt/decrypt the user info
+passport.serializeUser(user.serializeUser());
+passport.deserializeUser(user.deserializeUser());
+
+//init passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//init flash
+app.use(flash());
+
+//set express session
+app.use(session({
+  secret:"somesecert",
+  saveUninitialized:false,
+  resave:false
+}))
+
+
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let assignmentsRouter = require('../routes/assignments');
-
-let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
