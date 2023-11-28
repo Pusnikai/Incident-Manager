@@ -12,7 +12,7 @@ let flash = require('connect-flash');
 let app = express();
 //create a user model inst
 let userModel = require('../models/user');
-let user = userModel.User;
+let User = userModel.User;
 
 
 let mongoose = require('mongoose');
@@ -23,10 +23,20 @@ let mongoDB = mongoose.connection;
 mongoDB.on('error',console.error.bind(console,'Connection Error'));
 mongoDB.once('open',()=>{console.log("The Mongo DB is connected")});
 
+//set express session
+app.use(session({
+  secret:"somesecert",
+  saveUninitialized:false,
+  resave:false
+}))
+//user auth
+passport.use(User.createStrategy());
+
+
 
 //encrypt/decrypt the user info
-passport.serializeUser(user.serializeUser());
-passport.deserializeUser(user.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 //init passport
 app.use(passport.initialize());
@@ -35,12 +45,6 @@ app.use(passport.session());
 //init flash
 app.use(flash());
 
-//set express session
-app.use(session({
-  secret:"somesecert",
-  saveUninitialized:false,
-  resave:false
-}))
 
 
 let indexRouter = require('../routes/index');

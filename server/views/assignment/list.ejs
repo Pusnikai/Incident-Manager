@@ -10,70 +10,93 @@
     </style>
 </head>
 
-
 <main class="container" style="margin-bottom: 100px;">
     <!-- main  Content-->
-            <br>
-                <a href="/assignments/add" class ="btn btn-light" 
-                style="background-color: rgba(20, 175, 0, 0.8); color: rgba(0, 0, 0, 0.8);"
-                role = "button">
-                <i class="fa-solid fa-plus"></i> Add Incident
-                </a>          
-            <br>
+    <br>
+    <h1>Incident Report</h1>
+    <% if (typeof displayName == 'string' && displayName) { %>
+        <a href="/assignments/add" class="btn btn-light" style="background-color: rgba(20, 175, 0, 0.8); color: rgba(0, 0, 0, 0.8);" role="button">
+            <i class="fa-solid fa-plus"></i> Add Incident
+        </a>
+        <br>
+    <% } %>
+
     <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
             <div class="row">
-            <div class="offset-md-1 col-md-14">
+                <div class="offset-md-1 col-md-14">
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <tr class="d-flex">
+                            <!--This is for the table-->
+                            <% if (typeof displayName == 'string' && displayName) { %>
+                                <th class="text-center col-1">Name</th>
+                                <th class="text-center col-1">DateTime</th>
+                                <th class="text-center col-1">Type</th>
+                                <th class="text-center col-2">Description</th>
+                                <th class="text-center col-2">Admin</th>
+                                <th class="text-center col-2">Damage</th>
+                                <th class="text-center col-1">Status</th>
+                                <th class="text-center col-1">Edit Incident</th>
+                                <th class="text-center col-1">Delete Incident</th>
+                            <% } else { %>
+                                <th class="text-center col-2">Name</th>
+                                <th class="text-center col-1">DateTime</th>
+                                <th class="text-center col-2">Type</th>
+                                <th class="text-center col-2">Description</th>
+                                <th class="text-center col-2">Admin</th>
+                                <th class="text-center col-2">Damage</th>
+                                <th class="text-center col-1">Status</th>
+                            <% } %>
+                        </tr>
+                        <!--This is for the table contents-->
+                        <% for (let count = 0; count < report.length; count++) { %>
+                            <% if (typeof displayName == 'string' && displayName) { %>
+                                <tr class="d-flex">
+                                    <td class="text-center col-1"><%= report[count].Name %></td>
+                                    <td class="text-center col-1"><%= report[count].DateTime %></td>
+                                    <td class="text-center col-1"><%= report[count].Type %></td>
+                                    <td class="text-center col-2"><%= report[count].Description %></td>
+                                    <td class="text-center col-2"><%= report[count].Admin %></td>
+                                    <td class="text-center col-2"><%= report[count].Damage %></td>
+                                    <td class="text-center col-1"><%= report[count].Status %></td>
+                                    <td class="text-center col-1">
+                                        <a href="/assignments/edit/<%= report[count]._id %>"
+                                            class="btn btn-primary"
+                                            style="background-color: rgba(9, 0, 175, 0.8); color: rgba(0, 0, 0, 0.8);">
+                                            <i class="fa-solid fa-pen"></i> Edit
+                                        </a>
+                                    </td>
+                                    <td class="text-center col-1">
+                                        <a href="/assignments/delete/<%= report[count]._id %>"
+                                            class="btn btn-danger">
+                                            <i class="fa-solid fa-trash-can"></i> Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            <% } else { %>
+                                <tr class="d-flex">
+                                    <td class="text-center col-2"><%= report[count].Name %></td>
+                                    <td class="text-center col-1"><%= report[count].DateTime %></td>
+                                    <td class="text-center col-2"><%= report[count].Type %></td>
+                                    <td class="text-center col-2"><%= report[count].Description %></td>
+                                    <td class="text-center col-2"><%= report[count].Admin %></td>
+                                    <td class="text-center col-2"><%= report[count].Damage %></td>
+                                    <td class="text-center col-1"><%= report[count].Status %></td>
+                                </tr>
+                            <% } %>
+                        <% } %>
+                    </table>
+                </div>
+            </div>
             <br>
-            <table class="table table-bordered table-striped table-hover">
-                <tr class="d-flex">
-                <!--This is for the table-->
-                    <th class="text-center col-1">Name</th>
-                    <th class="text-center col-1">DateTime</th>
-                    <th class="text-center col-1">Type</th>
-                    <th class="text-center col-2">Description</th>
-                    <th class="text-center col-2">Admin</th>
-                    <th class="text-center col-2">Damage</th>
-                    <th class="text-center col-1">Status</th>
-                    <th class="text-center col-1">Edit Incident</th>
-                    <th class="text-center col-1">Delete Incident</th>
-                </tr>
-                <!--This is for the table contents-->
-                <% for(let count=0;count<report.length;count++) { %>    
-    
-                    <tr class="d-flex">
-                    <td class="text-center col-1"><%= report[count].Name %></td>
-                    <td class="text-center col-1"><%= report[count].DateTime %></td>
-                    <td class="text-center col-1"><%= report[count].Type %></td>
-                    <td class="text-center col-2"><%= report[count].Description %></td>
-                    <td class="text-center col-2"><%= report[count].Admin %></td>
-                    <td class="text-center col-2"><%= report[count].Damage %></td>
-                    <td class="text-center col-1"><%= report[count].Status %></td>
-                    <td class="text-center col-1">
-                        <a href="/assignments/edit/<%= report[count]._id %>"
-                        class="btn btn-primary"
-                        style="background-color: rgba(9, 0, 175, 0.8); color: rgba(0, 0, 0, 0.8);">
-                        <i class="fa-solid fa-pen"></i> Edit
-                        </a>
-                        </td>
-                        <td class="text-center col-1">
-                            <a href ="/assignments/delete/<%= report[count]._id %>"
-                                class="btn btn-danger"> <i class="fa-solid fa-trash-can"></i> Delete </a>
-                        </td>
-
-                <% } %>
-        </table>     
-        
-        
-`
-        
+            <br>
+            <br>
+            <br>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
 </main>
+
 
 
 <%- include ../partials/bottom_nav.ejs %> 

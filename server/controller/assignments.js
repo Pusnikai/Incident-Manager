@@ -12,7 +12,8 @@ module.exports.displayassignmentlist = async (req, res, next) => { //use async f
         const reportList = await Assignment.find(); 
         res.render('assignment/list', {
             title: 'report',
-            report: reportList 
+            report: reportList,
+            displayName: req.user ? req.user.displayName: '' 
         });
     } catch (err) {
         console.error(err);
@@ -25,7 +26,8 @@ module.exports.displayassignmentlist = async (req, res, next) => { //use async f
 
 
 module.exports.displayAddPage = async (req, res, next) => {
-    res.render('assignment/add', { title: 'Add Assignment' });
+    res.render('assignment/add', { title: 'Add Assignment',
+    displayName: req.user ? req.user.displayName: '' });
 }//renders the add page
 module.exports.processAddPage = async (req, res, next) => {
     try {
@@ -54,7 +56,8 @@ module.exports.displayEditPage = async (req, res, next) => {
 
     try {
         const assignmentToEdit = await Assignment.findById(id);
-        res.render('assignment/edit', { title: 'Edit Assignment', assignments: assignmentToEdit });
+        res.render('assignment/edit', { title: 'Edit Assignment', assignments: assignmentToEdit,
+        displayName: req.user ? req.user.displayName: '' });
     } catch (err) {
         console.error(err);
         res.render('assignment/edit', { error: 'there is an error on server' });

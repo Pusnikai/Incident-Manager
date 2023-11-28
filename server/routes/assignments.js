@@ -6,21 +6,32 @@ let Assignment = require('../models/assignments'); // Change variable name to si
 let assignmentController = require('../controller/assignments')
 /* read */
 
+function requireAuth(req,res,next)
+{
+    if(!req.isAuthenticated())
+    {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+
+
 router.get('/', assignmentController.displayassignmentlist);
 
 /* Create */
 /* get route for display and post for processing */
-router.get('/add', assignmentController.displayAddPage);
-router.post('/add',assignmentController.processAddPage);
+router.get('/add', requireAuth, assignmentController.displayAddPage);
+router.post('/add',requireAuth, assignmentController.processAddPage);
 
 /* Update */
 /* get route for display and post for processing */
-router.get('/edit/:id', assignmentController.displayEditPage);
-router.post('/edit/:id', assignmentController.processEditPage);
+router.get('/edit/:id', requireAuth, assignmentController.displayEditPage);
+router.post('/edit/:id', requireAuth, assignmentController.processEditPage);
 /* Delete */
 /* get route for display and post for processing */
 
-router.get('/delete/:id', assignmentController.preformDelete);
+router.get('/delete/:id', requireAuth, assignmentController.preformDelete);
 
 
 
