@@ -1,6 +1,7 @@
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
+//Requires User to Enter their Username
 let User = mongoose.Schema({
     username:
     {
