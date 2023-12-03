@@ -1,4 +1,4 @@
-/* SPA --> single page app */
+/* SPA --> The Single page app */
 (function(){
     function Start()
     {
