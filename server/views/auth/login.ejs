@@ -6,11 +6,13 @@
 <main class = "container">
     <!--mssg area-->
     <% if (message.length > 0) { %>
-    <dvi class="alert alter-danger">
+    <div class="alert alter-danger">
         <%= message %>
     </div>
     <% } %>
     <div class="row">
+        <!--This is the user login here-->
+        <!--Users are asked to login below to report an incident-->
         <div class="offset-md-4 col-md-4">
             <h1>User Login Here:</h1>
             <form method="post" autocomplete="off">
@@ -29,6 +31,7 @@
                     id="password" required>
                     or
                     <a href="/register">Register Here</a> 
+                    <!--Users input the information asked and registe below.-->
                 </fieldset>   
                 <fieldset class="form-group text-right">
                     <input type="submit" class="btn btn-success"
