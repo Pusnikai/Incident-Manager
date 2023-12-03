@@ -18,7 +18,7 @@ module.exports.displayLoginPage = (req,res,next)=> {
     {
         res.render('auth/login',
         {
-            title: 'Login',
+            title: 'Login Here',
             message: req.flash('loginMessage'),
             displayName: req.user ? req.user.displayName: ''
         })
@@ -59,7 +59,7 @@ module.exports.displayRegisterPage = (req,res,next) =>{
     {
         res.render('auth/register',
             {
-                title: 'Register',
+                title: 'Register Here',
                 message: req.flash('registerMessage'),
                 displayName: req.user ? req.user.displayName: ''
             })
@@ -87,7 +87,7 @@ module.exports.processRegisterPage = (req,res,next)=>{
             }
             return res.render('auth/register',
             {
-                title: 'Register',
+                title: 'Register Here',
                 message: req.flash('registerMessage'),
                 displayName: req.user ? req.user.displayName: ''
             });
