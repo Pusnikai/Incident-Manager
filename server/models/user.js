@@ -7,7 +7,7 @@ let User = mongoose.Schema({
         type:String,
         default:"",
         trim:true,
-        required:'Username is required'
+        required:'The Username is required'
     },
     /*
     password:
