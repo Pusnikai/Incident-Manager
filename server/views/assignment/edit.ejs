@@ -1,136 +1,86 @@
 <%- include ../partials/header.ejs %>
 
-<%- include ../partials/main_nav.ejs %> 
+    <%- include ../partials/main_nav.ejs %>
 
-<head>
-    <!-- making a margin to see everything -->
-    <style>
-        main.container {
-            margin-bottom: 300px; /* Adjust the value to set the desired space between content and footer */
-        }
-    </style>
-</head>
-<main class="container" style="margin-bottom: 100px;">
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-3 cl-md-6 text-center">
-        <h1>Update Incident</h1>
-        <form class="form" method="POST">
-            <!--this is the form for the eidt page -->
-            <div class="form-group">
-                <label for="NameTextField">Name</label>
-                <input type="text" class="form-control"
-                id="NameTextField"
-                placeholder="Enter the title"
-                name="Name"
-                value="<%= assignments.Name %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="DateTimeTextField">DateTime</label>
-                <input type="text" class="form-control"
-                id="DateTimeTextField"
-                placeholder="Enter the date and time"
-                name="DateTime"
-                value="<%= assignments.DateTime %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="TypeTextField">Type</label>
-                <input type="text" class="form-control"
-                id="TypeTextField"
-                placeholder="Enter the type"
-                name="Type"
-                value="<%= assignments.Type %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="DescriptionTextField">Description</label>
-                <input type="text" class="form-control"
-                id="DescriptionTextField"
-                placeholder="Enter the assignment description"
-                name="Description"
-                value="<%= assignments.Description %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-           <br>
-            <div class="form-group">
-                <label for="AdminTextField">Admin</label>
-                <input type="text" class="form-control"
-                id="AdminTextField"
-                placeholder="Enter the admin"
-                name="Admin"
-                value="<%= assignments.Admin %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-           <br>
-            <div class="form-group">
-                <label for="DamageTextField">Damage</label>
-                <input type="text" class="form-control"
-                id="DamageTextField"
-                placeholder="Enter the Damage"
-                name="Damage"
-                value="<%= assignments.Damage %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-          <br>
-            <div class="form-group">
-                <label for="StatusTextField">Status</label>
-                <input type="text" class="form-control"
-                id="StatusTextField"
-                placeholder="Enter the Status"
-                name="Status"
-                value="<%= assignments.Status %>"
-                required
-                style="background-color: white;"
-                style="color: white;">
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <!-- "Submit" button -->
-                    <button class="btn btn-primary btn-block mb-2" type="submit"
-                            style="background-color: rgba(231, 255, 0, 0.8); color: black;">
+        <head>
+            <!-- making a margin to see everything -->
+            <style>
+                main.container {
+                    margin-bottom: 300px;
+                    /* Adjust the value to set the desired space between content and footer */
+                }
+            </style>
+        </head>
+        <main class="container" style="margin-bottom: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-3 cl-md-6 text-center">
+                        <h1>Update Incident</h1>
+                        <form class="form" method="POST">
+                            <!--this is the form for the eidt page -->
+                            <div class="form-group">
+                                <label for="NameTextField">Name</label>
+                                <input type="text" class="form-control" id="NameTextField" placeholder="Enter the title" name="Name" value="<%= assignments.Name %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="DateTimeTextField">DateTime</label>
+                                <input type="text" class="form-control" id="DateTimeTextField" placeholder="Enter the date and time" name="DateTime" value="<%= assignments.DateTime %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="TypeTextField">Type</label>
+                                <input type="text" class="form-control" id="TypeTextField" placeholder="Enter the type" name="Type" value="<%= assignments.Type %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="DescriptionTextField">Description</label>
+                                <input type="text" class="form-control" id="DescriptionTextField" placeholder="Enter the assignment description" name="Description" value="<%= assignments.Description %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <label for="AdminTextField">Admin</label>
+                                <input type="text" class="form-control" id="AdminTextField" placeholder="Enter the admin" name="Admin" value="<%= assignments.Admin %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <label for="DamageTextField">Damage</label>
+                                <input type="text" class="form-control" id="DamageTextField" placeholder="Enter the Damage" name="Damage" value="<%= assignments.Damage %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <label for="StatusTextField">Status</label>
+                                <input type="text" class="form-control" id="StatusTextField" placeholder="Enter the Status" name="Status" value="<%= assignments.Status %>" required style="background-color: white;" style="color: white;">
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- "Submit" button -->
+                                    <button class="btn btn-primary btn-block mb-2" type="submit" style="background-color: rgba(231, 255, 0, 0.8); color: black;">
                         <i class="fa-solid fa-vault"></i> Submit
                     </button>
-                </div>
-            
-            </div>
-            <div class="row">
-                <div class="col">
-                    <!-- "Cancel" button -->
-                    <a href="/assignments" class="btn btn-warning btn-block"
-                    style="background-color: rgba(255, 0, 0, 1); color: black;">
-                        <i class="fa-solid fa-exclamation"></i> Cancel
-                    </a>
-                </div>
-            </div>
-            </form>
-            </div>
-        </div>
-    </div>
-</div>
+                                </div>
 
-</main>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- "Cancel" button -->
+                                    <a href="/assignments" class="btn btn-warning btn-block" style="background-color: rgba(255, 0, 0, 1); color: black;">
+                                        <i class="fa-solid fa-exclamation"></i> Cancel
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-<%- include ../partials/bottom_nav.ejs %> 
-<!--footer-->
-<%- include ../partials/footer.ejs %> 
+        </main>
+
+        <%- include ../partials/bottom_nav.ejs %>
+            <!--footer-->
+            <%- include ../partials/footer.ejs %>

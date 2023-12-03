@@ -10,21 +10,17 @@ ul {
 body {
     font-family: Arial, sans-serif, Times, serif, sans-serif;
     background-color: #000;
-    /* Change to black */
     color: #fff;
-    /* Change to white */
 }
 
 #header {
     text-align: center;
     background-color: #000000;
     color: #fff;
-    /* Change to white */
     padding: 20px 0;
 }
 
 #homeSection {
-    /*background: linear-gradient(135deg, #ffb302fc, #ff0000);*/
     color: #000000;
     padding: 20px;
     text-align: center;

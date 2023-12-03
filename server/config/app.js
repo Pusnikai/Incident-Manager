@@ -20,16 +20,16 @@ let DB = require('./db');
 //this is the mongoose connection
 mongoose.connect(DB.URI);
 let mongoDB = mongoose.connection;
-mongoDB.on('error',console.error.bind(console,'Connection Error'));
-mongoDB.once('open',()=>{console.log("The Mongo DB is connected")});
+mongoDB.on('error', console.error.bind(console, 'Connection Error'));
+mongoDB.once('open', () => { console.log("The Mongo DB is connected") });
 
 //set express session
 app.use(session({
-  secret:"somesecert",
-  saveUninitialized:false,
-  resave:false
-}))
-//user authenicator
+        secret: "somesecert",
+        saveUninitialized: false,
+        resave: false
+    }))
+    //user authenicator
 passport.use(User.createStrategy());
 
 
@@ -69,22 +69,20 @@ app.use('/assignments', assignmentsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error',
-  {
-    title:"Error"
-  }
-  );
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error', {
+        title: "Error"
+    });
 });
 
 module.exports = app;

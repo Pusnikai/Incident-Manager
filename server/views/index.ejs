@@ -1,38 +1,39 @@
 <%- include partials/header.ejs %>
 
-<%- include partials/main_nav.ejs %> 
-<!--Nav Bar-->
-<main>
-<!-- main  Content-->
-<div class="jumbotron jumbotron-fluid text-center p-4 border border-light rounded">
-  <div class="container">
-    <h1 class="display-3">Welcome To The Incident Management <%= title %> Page</h1>
+    <%- include partials/main_nav.ejs %>
+        <!--Nav Bar-->
+        <main>
+            <!-- main  Content-->
+            <div class="jumbotron jumbotron-fluid text-center p-4 border border-light rounded">
+                <div class="container">
+                    <h1 class="display-3">Welcome To The Incident Management
+                        <%= title %> Page</h1>
 
-<% if (title == "Home") { %>
-            <br>
-            <br>
-        <section id="homeSection">
-            <div class="home-content">
-                All of your incident reports are in the Incident Report page.
-                <h3>Head on over to the Incident Report page to Create, Read, Update and Delete Incidents.</h3> 
-                <br>
-                <h5>Click on our team logo or the Incident Report in the top right!</h5>
-            <a href="/assignments">
-                <img src="/Assets/system.gif" alt="GIF" class="img-fluid" width="200">
-            </a>
+                    <% if (title == "Home") { %>
+                        <br>
+                        <br>
+                        <section id="homeSection">
+                            <div class="home-content">
+                                All of your incident reports are in the Incident Report page.
+                                <h3>Head on over to the Incident Report page to Create, Read, Update and Delete Incidents.</h3>
+                                <br>
+                                <h5>Click on our team logo or the Incident Report in the top right!</h5>
+                                <a href="/assignments">
+                                    <img src="/Assets/system.gif" alt="GIF" class="img-fluid" width="200">
+                                </a>
+                            </div>
+
+                        </section>
+                        <% } %>
+
+                </div>
+
             </div>
-
-        </section>
-<% } %>
-
-</div>
-
-</div>
-    <br>
-    <br>
-    <br>
-    <br>
-</main>
-<%- include partials/bottom_nav.ejs %> 
-<!--footer-->
-<%- include partials/footer.ejs %> 
+            <br>
+            <br>
+            <br>
+            <br>
+        </main>
+        <%- include partials/bottom_nav.ejs %>
+            <!--footer-->
+            <%- include partials/footer.ejs %>

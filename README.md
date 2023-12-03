@@ -25,4 +25,13 @@ Next Steps
 -Make it look Nice
 -Loggin and user authentications
 -About sections, Home Page views refining and making it better.
+
+(Week 3)
+Next Steps
+-Refresh GUI interface and user Interfaces
+-client side intel
+-Check Control Version 
+-Cloud Deployment
+-Comments each file for general pointer
+-BackGround Image Implementation and few serverside tweaks
     

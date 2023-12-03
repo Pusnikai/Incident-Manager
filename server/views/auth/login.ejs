@@ -1,54 +1,46 @@
 <%- include ../partials/header.ejs %>
 
-<%- include ../partials/main_nav.ejs %> 
+    <%- include ../partials/main_nav.ejs %>
 
 
-<main class = "container">
-    <!--mssg area-->
-    <% if (message.length > 0) { %>
-    <div class="alert alter-danger">
-        <%= message %>
-    </div>
-    <% } %>
-    <div class="row">
-        <!--This is the user login here-->
-        <!--Users are asked to login below to report an incident-->
-        <div class="offset-md-4 col-md-4">
-            <h1>User Login Here:</h1>
-            <form method="post" autocomplete="off">
-                <fieldset class="form-group">
-                    <label for="username"></label>
-                    <input type="text" class="form-control"
-                    name="username"
-                    placeholder="enter username"
-                    id="username" required autofocus>
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="password"></label>
-                    <input type="password" class="form-control"
-                    name="password"
-                    placeholder="enter password"
-                    id="password" required>
-                    or
-                    <a href="/register">Register Here</a> 
-                    <!--Users input the information asked and registe below.-->
-                </fieldset>   
-                <fieldset class="form-group text-right">
-                    <input type="submit" class="btn btn-success"
-                    value="Login">
-                    <a href="/">
-                        <input type="button" class="btn btn-warning" value="Cancel">
-                    </a>
-                </fieldset>
+        <main class="container">
+            <!--mssg area-->
+            <% if (message.length > 0) { %>
+                <div class="alert alter-danger">
+                    <%= message %>
+                </div>
+                <% } %>
+                    <div class="row">
+                        <!--This is the user login here-->
+                        <!--Users are asked to login below to report an incident-->
+                        <div class="offset-md-4 col-md-4">
+                            <h1>User Login Here:</h1>
+                            <form method="post" autocomplete="off">
+                                <fieldset class="form-group">
+                                    <label for="username"></label>
+                                    <input type="text" class="form-control" name="username" placeholder="enter username" id="username" required autofocus>
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <label for="password"></label>
+                                    <input type="password" class="form-control" name="password" placeholder="enter password" id="password" required> or
+                                    <a href="/register">Register Here</a>
+                                    <!--Users input the information asked and registe below.-->
+                                </fieldset>
+                                <fieldset class="form-group text-right">
+                                    <input type="submit" class="btn btn-success" value="Login">
+                                    <a href="/">
+                                        <input type="button" class="btn btn-warning" value="Cancel">
+                                    </a>
+                                </fieldset>
 
-            </form>
-        </div>
-    </div>
+                            </form>
+                        </div>
+                    </div>
 
-</main>
+        </main>
 
 
 
-<%- include ../partials/bottom_nav.ejs %> 
-<!--footer-->
-<%- include ../partials/footer.ejs %> 
+        <%- include ../partials/bottom_nav.ejs %>
+            <!--footer-->
+            <%- include ../partials/footer.ejs %>
