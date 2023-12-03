@@ -29,7 +29,7 @@ app.use(session({
   saveUninitialized:false,
   resave:false
 }))
-//user auth
+//user authenicator
 passport.use(User.createStrategy());
 
 
