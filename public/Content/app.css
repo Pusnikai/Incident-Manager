@@ -6,7 +6,10 @@ ul {
     padding: 0;
     margin: 0;
 }
-
+#homeSection h3,
+#homeSection h5 {
+    color: white;
+}
 body {
     font-family: Arial, sans-serif, Times, serif, sans-serif;
     background-color: #000;
@@ -28,6 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 #homeSection p {
@@ -56,12 +60,4 @@ body {
 
 .navLink:hover {
     color: #55e412;
-}
-
-.colRight {
-    display: block;
-    text-align: left;
-    color: whitesmoke;
-    font-size: 20px;
-    margin-bottom: 100px;
 }
