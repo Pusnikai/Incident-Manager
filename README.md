@@ -48,14 +48,20 @@ test 1
 
 What was your motivation?
 
-Our motiivation for this project is to assist users like yourself. We aim to make managing unexpected situations easier. Creating the inceident-manager provide solutions and offering control and a clear path when navagating unforseen predicaments. We strive to allow users by making their experience smooth a manageable.
+Our motivation for this project is to assist users like yourself. We aim to make managing unexpected situations easier. Creating the incident manager provides solutions and offers control and a clear path when navigating unforeseen predicaments. We strive to allow users to make their experience smooth a manageable.
 why did you build this project?
+
+why did you build this project?
+
+This project was made to address the problems of managing unforeseen incidents very efficiently. Realizing the complications of this kind of situation, the goal was to devise a solution that would make incident reporting simple.
 
 What problem does it solve?
 
+
+
 What did you learn?
 
-Troubles we encountered were implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update and delete data. Angular is a common framework used to develop single-page applications
+The trouble we encountered was implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update, and delete data. Angular is a common framework used to develop single-page applications.
 
 
 test 2
