@@ -56,3 +56,6 @@ What problem does it solve?
 What did you learn?
 
 Troubles we encountered were implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update and delete data. Angular is a common framework used to develop single-page applications
+
+
+test 2
