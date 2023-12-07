@@ -9,6 +9,8 @@ PICK ONE
 
 You can Create, Update, and Delete incidents as you see fit.
 
+Troubles we encountered were implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update and delete data. Angular is a common framework used to develop single-page applications
+
 (Week 1)
 Things to do:
 Splash page with team logo
