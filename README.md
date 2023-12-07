@@ -34,4 +34,8 @@ Next Steps
 -Cloud Deployment
 -Comments each file for general pointer
 -BackGround Image Implementation and few serverside tweaks
-    
+-Fully functional
+-Organized 
+-Understandable
+
+
