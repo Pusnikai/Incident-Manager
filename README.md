@@ -1,15 +1,8 @@
 # Incident-Manager
 Incident Manager simplifies incident reporting with a user-friendly setup and timely notifications. It's your practical tool to handle unexpected situations effortlessly, keeping you informed and in control.
-
 Everything is in your control, creating updating and deleting incidents. 
-
 Seamless changes, creating new entries, modifiying existing information. Our goal is to have  a well organized and efficiently managed incident database
-
-PICK ONE 
-
 You can Create, Update, and Delete incidents as you see fit.
-
-Troubles we encountered were implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update and delete data. Angular is a common framework used to develop single-page applications
 
 (Week 1)
 Things to do:
@@ -61,3 +54,5 @@ why did you build this project?
 What problem does it solve?
 
 What did you learn?
+
+Troubles we encountered were implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update and delete data. Angular is a common framework used to develop single-page applications
