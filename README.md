@@ -1,6 +1,7 @@
 # Incident-Manager
 Incident Manager simplifies incident reporting with a user-friendly setup and timely notifications. It's your practical tool to handle unexpected situations effortlessly, keeping you informed and in control.
 
+Everything is in your control, creating updating and deleting incidents. Seamless changes, creating new entries, modifiying existing information. Our goal is to have  a well organized and efficiently managed incident database
 You can Create, Update, and Delete incidents as you see fit.
 
 (Week 1)
