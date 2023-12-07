@@ -29,7 +29,7 @@ app.use(session({
         saveUninitialized: false,
         resave: false
     }))
-    //user authenicator
+    // setup passport for user authenication
 passport.use(User.createStrategy());
 
 
@@ -46,7 +46,7 @@ app.use(passport.session());
 app.use(flash());
 
 
-
+//Imported Routes for the application 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let assignmentsRouter = require('../routes/assignments');
@@ -62,7 +62,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-
+//Defined routes for the application
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/assignments', assignmentsRouter)
@@ -72,7 +72,7 @@ app.use(function(req, res, next) {
     next(createError(404));
 });
 
-// error handler
+// error handler for application 
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
