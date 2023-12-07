@@ -37,7 +37,7 @@ let User = mongoose.Schema({
 
 )
 
-//config options for user model
+//configured options for user model to allow an bette user interactive interface
 
 let options = ({ MissingPasswordError: 'Wrong/Missing Password' });
 User.plugin(passportLocalMongoose, options);
