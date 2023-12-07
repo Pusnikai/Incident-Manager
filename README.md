@@ -43,3 +43,13 @@ Next Steps
  
 
 
+
+
+What was your motivation?
+
+Our motiivation for this project is to assist users like yourself. We aim to make managing unexpected situations easier. Creating the inceident-manager provide solutions and offering control and a clear path when navagating unforseen predicaments. We strive to allow users by making their experience smooth a manageable.
+why did you build this project?
+
+What problem does it solve?
+
+What did you learn?
