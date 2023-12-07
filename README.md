@@ -14,7 +14,7 @@ Name, Date (day and time), type of incident, description, Administrator, damages
 -testing git
 -Need to make an Video for change
 -models done
--Debugging issue with integrations from different collaborator successful :)
+-Debugging issue with integrations from different collaborator successful 
 -Adding new incident to database
 -Full CRUD working and compatible
 -Need to make video 
