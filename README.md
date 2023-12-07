@@ -37,5 +37,9 @@ Next Steps
 -Fully functional
 -Organized 
 -Understandable
+-Appropriate Design, font, colours choices 
+-Allowed users to update and delete the data
+-Functional and User Authentication is implemented and works
+ 
 
 
