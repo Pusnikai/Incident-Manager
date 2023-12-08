@@ -10,7 +10,6 @@ Splash page with team logo
 logo will direct user to incident page
 Incident Report Requirement:
 Name, Date (day and time), type of incident, description, Administrator, damages, status (resolved or work in progress)
-
 -Git commits and push
 -testing git
 -Need to make an Video for change
@@ -41,12 +40,7 @@ Next Steps
 -Appropriate Design, font, colours choices 
 -Allowed users to update and delete the data
 -Functional and User Authentication is implemented and works
-<<<<<<< HEAD
-=======
- 
-S
-
->>>>>>> 9c39fee5fc9c66104395118495f250135ddf95eb
+-Integration with other services
 
 What was your motivation?
 
@@ -58,8 +52,6 @@ why did you build this project?
 This project was made to address the problems of managing unforeseen incidents very efficiently. Realizing the complications of this kind of situation, the goal was to devise a solution that would make incident reporting simple.
 
 What problem does it solve?
-
-
 
 What did you learn?
 
