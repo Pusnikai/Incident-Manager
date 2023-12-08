@@ -41,10 +41,6 @@ Next Steps
 -Appropriate Design, font, colours choices 
 -Allowed users to update and delete the data
 -Functional and User Authentication is implemented and works
- 
-S
-test 1
-
 
 What was your motivation?
 
@@ -64,4 +60,3 @@ What did you learn?
 The trouble we encountered was implementing the connection with Angular and CRUD to MongoDB. CRUD is necessary as this is what helps us create, update, and delete data. Angular is a common framework used to develop single-page applications.
 
 
-test 2
