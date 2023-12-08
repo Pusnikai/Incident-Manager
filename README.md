@@ -4,8 +4,9 @@ Incident-Manager
 Incident Manager simplifies incident reporting with a user-friendly setup and timely notifications. It's your practical tool to handle unexpected situations effortlessly, keeping you informed and in control. Everything is in your control, creating, updating, and deleting incidents. Seamless changes, creating new entries, modifying existing information. Our goal is to have a well-organized and efficiently managed incident database. You can Create, Update, and Delete incidents as you see fit.
 Development Journey
 
-How to get started:
+
 # Visit Our site https://incidentvault.onrender.com/
+How to get started:
 To create a new incident:
 1. Navigate to the incident page
 2. Click on the 'Create Incident' button
@@ -63,6 +64,7 @@ Throughout the development process, we encountered challenges, particularly in i
     Integration with other services
 
 Resources:
+
     Special thanks to Prof for the insights shared on (Media Gallery) during the development.
     w3school.com
     www.npmjs.com
