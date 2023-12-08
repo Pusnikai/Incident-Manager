@@ -11,6 +11,11 @@ logo will direct user to incident page
 Incident Report Requirement:
 Name, Date (day and time), type of incident, description, Administrator, damages, status (resolved or work in progress)
 
+
+Our goal for this project was to help out users with unforeseen predicaments. The answer to that is a incident manager. Which allows useres to document exact information/details seamlessly.  On top of that Making the manager user friendly which we prioritized on being more simple and efficient. Throughout the development, we had challenges like connecting Angular and CRUD to MongoDB. CRUD is essential and stands for creating, read, update, and deleting data. Angular is useful for creating a user-friendly single page application. 
+
+
+
 -Git commits and push
 -testing git
 -Need to make an Video for change
