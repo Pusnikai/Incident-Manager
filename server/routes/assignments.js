@@ -1,10 +1,16 @@
+// Import required modules and dependenices
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
+// Import the Assignment model
 let Assignment = require('../models/assignments'); // Change variable name to singular, e.g., Assignment
+// Import the assignmentController for handling routes
 let assignmentController = require('../controller/assignments')
-    /* read */
+    /* 
+        Middleware function to check authentication before 
+        moving to specific routes
+    */
 
 function requireAuth(req, res, next) {
     if (!req.isAuthenticated()) {
@@ -14,7 +20,7 @@ function requireAuth(req, res, next) {
 }
 
 
-
+// Route for displaying a list of assignments
 router.get('/', assignmentController.displayassignmentlist);
 
 /* Create */
