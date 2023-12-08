@@ -41,6 +41,12 @@ Next Steps
 -Appropriate Design, font, colours choices 
 -Allowed users to update and delete the data
 -Functional and User Authentication is implemented and works
+<<<<<<< HEAD
+=======
+ 
+S
+
+>>>>>>> 9c39fee5fc9c66104395118495f250135ddf95eb
 
 What was your motivation?
 
